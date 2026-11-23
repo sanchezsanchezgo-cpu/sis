@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de servicios de mantenimiento con tarifas base y diagnósticos técnicos para consolas PlayStation, Xbox y Nintendo Switch en GlitchZero.">
+    <title>GlitchZero | Catálogo de Servicios y Tarifas Base</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a href="index.html" class="brand">Glitch<strong>Zero</strong></a>
+
+            <button
+                type="button"
+                id="menu-toggle"
+                class="menu-toggle"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-menu" class="nav-links container">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link active">Servicios y Tarifas</a></li>
+                <li><a href="contacto.html" class="nav-link">Solicitar Diagnóstico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <span class="badge">Tarifas Transparentes</span>
+            <h1>Catálogo de Servicios y Diagnóstico Técnico</h1>
+            <p>
+                Conoce nuestros paquetes de mantenimiento preventivo con tarifa base definida y nuestras
+                reparaciones especializadas sujetas a valoración técnica previa en taller.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <header class="section-header">
+                <h2>Mantenimiento Preventivo y Controles (Tarifa Base)</h2>
+                <p>Servicios estandarizados con entrega rápida y pago contra prueba en mostrador.</p>
+            </header>
+
+            <div class="container">
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-base">Tarifa Base</span>
+                        <h3>Limpieza Interna + Pasta Térmica</h3>
+                        <p>
+                            Desarmado completo, eliminación de polvo en disipador y ventilador, y aplicación de
+                            pasta térmica de alta conductividad (PS2/PS3/PS4, Xbox 360, One y Series S/X).
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo estimado: <strong class="price">$450 MXN</strong></p>
+                            <p>Tiempo estimado: <strong>24 horas</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Servicio</a>
+                    </div>
+                </article>
+
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-base">Tarifa Base</span>
+                        <h3>Mantenimiento PS5 (Metal Líquido)</h3>
+                        <p>
+                            Limpieza profunda de turbina y fuente interna en modelos Fat, Slim y Pro, más
+                            reposición de metal líquido en el procesador APU para evitar sobrecalentamiento.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo estimado: <strong class="price">$650 MXN</strong></p>
+                            <p>Tiempo estimado: <strong>24 a 48 horas</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Servicio</a>
+                    </div>
+                </article>
+
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-base">Tarifa Base</span>
+                        <h3>Reparación de Drift en Controles</h3>
+                        <p>
+                            Sustitución de potenciómetros o módulos joystick analógicos desgastados y calibración
+                            electrónica para DualSense, DualShock, controles Xbox y Nintendo Joy-Con.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo estimado: <strong class="price">$350 MXN</strong></p>
+                            <p>Tiempo estimado: <strong>Mismo día (3 a 5 hrs)</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary btn-full">Solicitar Servicio</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-block section-alt">
+            <header class="section-header">
+                <h2>Reparaciones Electrónicas (Sujetas a Diagnóstico)</h2>
+                <p>
+                    Las fallas de placa o componentes requieren revisión física con microscopio y multímetro
+                    antes de confirmar el presupuesto final al cliente.
+                </p>
+            </header>
+
+            <div class="container">
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-diag">Diagnóstico Previo</span>
+                        <h3>Reemplazo de Puerto HDMI</h3>
+                        <p>
+                            Microsoldadura de puerto HDMI dañado, reconstrucción de pistas levantadas y revisión
+                            de circuito integrado codificador de video en PS4, PS5 y Xbox Series.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo: <strong class="price-quote">Cotización tras revisión</strong></p>
+                            <p>Tiempo estimado: <strong>48 a 72 horas</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-secondary btn-full">Agendar Revisión</a>
+                    </div>
+                </article>
+
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-diag">Diagnóstico Previo</span>
+                        <h3>Falla de Encendido / Fuente de Poder</h3>
+                        <p>
+                            Detección de cortocircuitos en placa madre, reemplazo de capacitores, fusibles o
+                            módulo de fuente interna en consolas que no encienden o se apagan al instante.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo: <strong class="price-quote">Cotización tras revisión</strong></p>
+                            <p>Tiempo estimado: <strong>48 a 72 horas</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-secondary btn-full">Agendar Revisión</a>
+                    </div>
+                </article>
+
+                <article class="card service-card">
+                    <div>
+                        <span class="service-tag tag-diag">Diagnóstico Previo</span>
+                        <h3>Centro de Carga y Pantalla Switch / Wii U</h3>
+                        <p>
+                            Cambio de puerto USB-C, reparación de circuito integrado de carga (M92T36) o
+                            sustitución de pantalla táctil en Nintendo Switch Base, Lite, OLED y Wii U.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="service-meta">
+                            <p>Costo: <strong class="price-quote">Cotización tras revisión</strong></p>
+                            <p>Tiempo estimado: <strong>48 horas</strong></p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-secondary btn-full">Agendar Revisión</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="cta-banner container">
+            <div>
+                <h2>¿Qué ocurre si decides no aprobar una cotización?</h2>
+                <p>
+                    Si tras el diagnóstico técnico decides no realizar la reparación, puedes retirar tu consola
+                    sin compromiso dentro del plazo de resguardo de 30 días naturales.
+                </p>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Registrar mi Equipo</a>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content container">
+            <article>
+                <h3>GlitchZero Taller Técnico</h3>
+                <p>Especialistas en mantenimiento preventivo y reparación electrónica de consolas y controles con 20 años de experiencia.</p>
+            </article>
+
+            <nav aria-label="Enlaces rápidos">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios y Tarifas</a></li>
+                    <li><a href="contacto.html">Solicitar Diagnóstico</a></li>
+                </ul>
+            </nav>
+
+            <address>
+                <h4>Contacto y Horario</h4>
+                <p>Av. Tecnológico #415, Local 4, Col. Centro</p>
+                <p>Tel / WhatsApp: <a href="tel:+524771234567">477 123 4567</a></p>
+                <p>Lunes a Sábado: 10:00 – 19:00 hrs</p>
+            </address>
+        </div>
+        <p class="footer-bottom">&copy; 2026 GlitchZero Servicio Técnico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

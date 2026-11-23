@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita tu diagnóstico técnico o mantenimiento preventivo en GlitchZero. Registra tu consola y consulta nuestras políticas de resguardo.">
+    <title>GlitchZero | Solicitar Diagnóstico y Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a href="index.html" class="brand">Glitch<strong>Zero</strong></a>
+
+            <button
+                type="button"
+                id="menu-toggle"
+                class="menu-toggle"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-menu" class="nav-links container">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios y Tarifas</a></li>
+                <li><a href="contacto.html" class="nav-link active">Solicitar Diagnóstico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <span class="badge">Pre-registro en Línea</span>
+            <h1>Solicitar Diagnóstico o Mantenimiento</h1>
+            <p>
+                Completa los datos de tu equipo para agilizar su recepción en mostrador.
+                Recuerda que todos los pagos se realizan únicamente al recoger y probar tu consola.
+            </p>
+        </section>
+
+        <section class="contact-layout container">
+            <article class="card form-container">
+                <h2>Datos de la Solicitud</h2>
+                <p class="form-hint">Los campos marcados con <strong>*</strong> son obligatorios.</p>
+
+                <form id="diagnostic-form" action="#resultado-solicitud" method="post" novalidate>
+                    <div id="form-alert" class="form-alert" role="alert" aria-live="polite"></div>
+
+                    <fieldset class="form-fieldset">
+                        <legend>1. Información de Contacto</legend>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza Ruiz" minlength="3" maxlength="80" required>
+                            <small class="error-message" id="error-nombre"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp (10 dígitos) *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="4771234567" pattern="[0-9]{10}" maxlength="10" required>
+                            <small class="error-message" id="error-telefono"></small>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend>2. Detalles del Equipo y Falla</legend>
+
+                        <div class="form-group">
+                            <label for="equipo">Consola o dispositivo *</label>
+                            <select id="equipo" name="equipo" required>
+                                <option value="" disabled selected>-- Selecciona tu equipo --</option>
+                                <optgroup label="PlayStation">
+                                    <option value="PlayStation 5 (Fat / Slim / Pro)">PlayStation 5 (Fat / Slim / Pro)</option>
+                                    <option value="PlayStation 4 (Fat / Slim / Pro)">PlayStation 4 (Fat / Slim / Pro)</option>
+                                    <option value="PlayStation 2 / PlayStation 3">PlayStation 2 / PlayStation 3</option>
+                                </optgroup>
+                                <optgroup label="Xbox">
+                                    <option value="Xbox Series X / Series S">Xbox Series X / Series S</option>
+                                    <option value="Xbox One (Fat / S / X)">Xbox One (Fat / S / X)</option>
+                                    <option value="Xbox 360">Xbox 360</option>
+                                </optgroup>
+                                <optgroup label="Nintendo">
+                                    <option value="Nintendo Switch OLED">Nintendo Switch OLED</option>
+                                    <option value="Nintendo Switch Base / Lite">Nintendo Switch Base / Lite</option>
+                                    <option value="Nintendo Wii U / GameCube">Nintendo Wii U / GameCube</option>
+                                </optgroup>
+                                <optgroup label="Controles y Accesorios">
+                                    <option value="Control DualSense / DualShock">Control PS5 DualSense / DualShock</option>
+                                    <option value="Control Xbox / Joy-Con">Control Xbox / Nintendo Joy-Con</option>
+                                </optgroup>
+                            </select>
+                            <small class="error-message" id="error-equipo"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicio">Tipo de servicio requerido *</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="" disabled selected>-- Elige una opción --</option>
+                                <option value="Mantenimiento Preventivo ($450 - $650 MXN)">Mantenimiento Preventivo (Tarifa Base)</option>
+                                <option value="Reparación de Drift en Control ($350 MXN)">Reparación de Drift en Control (Tarifa Base)</option>
+                                <option value="Diagnóstico Puerto HDMI">Diagnóstico: Puerto HDMI dañado</option>
+                                <option value="Diagnóstico Encendido / Fuente">Diagnóstico: No enciende o se apaga</option>
+                                <option value="Diagnóstico Carga / Pantalla Switch / Wii U">Diagnóstico: Centro de carga o pantalla</option>
+                                <option value="Otro Diagnóstico Técnico">Otra falla (Requiere revisión en taller)</option>
+                            </select>
+                            <small class="error-message" id="error-servicio"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción detallada de la falla y accesorios *</label>
+                            <textarea id="descripcion" name="descripcion" rows="4" minlength="15" maxlength="500" placeholder="Describe qué falla presenta el equipo y si incluirás cables o controles al llevarlo al taller..." required></textarea>
+                            <small class="error-message" id="error-descripcion"></small>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="politicas" name="politicas" required>
+                            <label for="politicas">
+                                Acepto las políticas del taller, incluyendo el pago contra entrega en mostrador y el
+                                <strong>plazo máximo de 30 días naturales</strong> para recoger mi equipo una vez notificado. *
+                            </label>
+                        </div>
+                        <small class="error-message" id="error-politicas"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud de Diagnóstico</button>
+                </form>
+
+                <output id="resultado-solicitud" aria-live="polite"></output>
+            </article>
+
+            <aside class="contact-aside">
+                <article class="card">
+                    <h3>Antes de traer tu equipo</h3>
+                    <ul class="info-list">
+                        <li><strong>Respalda tus partidas:</strong> Recomendamos sincronizar tus datos guardados en la nube antes de cualquier intervención técnica.</li>
+                        <li><strong>Solo lo necesario:</strong> Para mantenimiento o reparación de consola, no es necesario traer cables ni controles salvo que la falla esté relacionada con ellos.</li>
+                        <li><strong>Comprobante digital:</strong> Al entregar en mostrador verificamos juntos el estado físico de la carcasa y accesorios recibidos.</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Ubicación y Atención</h3>
+                    <address>
+                        <p><strong>Dirección:</strong> Av. Tecnológico #415, Local 4, Col. Centro.</p>
+                        <p><strong>Horario:</strong> Lunes a Sábado de 10:00 a 19:00 hrs.</p>
+                        <p><strong>Teléfono / WhatsApp:</strong> 477 123 4567</p>
+                    </address>
+                </article>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content container">
+            <article>
+                <h3>GlitchZero Taller Técnico</h3>
+                <p>Especialistas en mantenimiento preventivo y reparación electrónica de consolas y controles con 20 años de experiencia.</p>
+            </article>
+
+            <nav aria-label="Enlaces rápidos">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios y Tarifas</a></li>
+                    <li><a href="contacto.html">Solicitar Diagnóstico</a></li>
+                </ul>
+            </nav>
+
+            <address>
+                <h4>Contacto y Horario</h4>
+                <p>Av. Tecnológico #415, Local 4, Col. Centro</p>
+                <p>Tel / WhatsApp: <a href="tel:+524771234567">477 123 4567</a></p>
+                <p>Lunes a Sábado: 10:00 – 19:00 hrs</p>
+            </address>
+        </div>
+        <p class="footer-bottom">&copy; 2026 GlitchZero Servicio Técnico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
